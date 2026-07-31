@@ -1,0 +1,86 @@
+** Bài học về git
+
+undo action
+Là những câu lệnh gần nhất đưa từ commit về. 
+// bỏ 1 file duy nhất được chỉ định, kết quả không nằm trong danh sách chuẩn bị commit nữa, nhưng toàn bộ nội dung sẽ được giữ nguyên. 
+git restore --staged<ten-file> 
+
+// bỏ nhiều file được chỉ định, kết quả không nằm trong danh sách chuẩn bị commit nữa, nhưng toàn bộ nội dung sẽ được giữ nguyên.
+git restore --staged <file1> <file2> <file3>
+
+// bỏ tất cả file trong thư mục hiện tại và thư mục con, kết quả không nằm trong danh sách chuẩn bị commit nữa, nhưng toàn bộ nội dung sẽ được giữ nguyên.
+git restore --staged .
+
+==============================================================================================================
+Vùng repo -> đưa về working directory
+//Huỷ bỏ 1 commit gần nhất, từ vùng repo về working directory
+git reset HEAD~1
+//Huỷ bỏ 2 commit gần nhất, từ vùng repo về working directory
+git reset HEAD~2
+//Huỷ bỏ 3 commit gần nhất, từ vùng repo về working directory
+git reset HEAD~3 
+
+==============================================================================================================
+Tìm hiểu thêm 
+git rm -cached: gợi ý của thầy là không có commit đầu tiên. 
+
+Xoá thư mục .git khởi tạo lại -> gợi ý commit đầu tiên ở repository
+==============================================================================================================
+git branch
+
+git branch => kiểm tra danh sách nhánh hiện có, hãy luôn checkout nhánh main
+git branch <ten-nhanh> => tạo ra một nhánh mới với tên được chỉ định
+git checkout <ten-nhanh> => chuyển đổi từ nhánh đang đứng qua nhánh được chỉ định
+git checkout -b <ten-nhanh> => tạo nhánh mới và checkout luôn tại nhánh đó
+==============================================================================================================
+github được share 
+
+git clone <URL>
+
+vào repo được share -> bấm vào code (tab ssh) -> vào folder ngoài cùng -> open new terminal -> git clone <paste-ssh>
+
+Trước khi làm 1 cái gì mới, check lại có code mới chưa ở folder đang làm dùng 
+git pull origin main
+ 
+Lưu ý: VD: 
+git checkout -b 01-phong
+git checkout -b 02-hieunnm
+git add .
+git commit -m"chroe: init my branch"
+git push origin 02-hieunnm
+
+Quy trình là: 
+1. Tạo nhánh
+2. Check out 
+3. Làm việc
+4. Push
+==============================================================================================================
+Lưu ý siêu quan trọng khi làm bài tập
+1. chuyển sang nhánh main 
+git checkout main 
+2. lấy code mới nhất về 
+git pull origin main
+3. tạo nhánh tương tự theo cú pháp lesson-{number}-{ten} để làm việc
+vd: lesson-02-hieunnm
+git checkout -b lesson-05-hieunnm
+
+Mỗi bài học tạo 1 folder mới trong thư mục k24-practice/tests/student-submissions/<thu-muc-moi>
+Các file tạo ra trong bài học tạo mới với thư mục này 
+==============================================================================================================
+Kiến thức bổ sung
+git -thay đổi commit message, dùng lệnh: 
+git commit --amend -m"message mới"
+
+-----
+Một số type phổ biến
+Một số type phổ biến được khuyên sử dụng bao gồm:
+
+feat: thêm một feature
+fix: fix bug cho hệ thống
+refactor: sửa code nhưng không fix bug cũng không thêm feature hoặc đôi khi bug cũng được fix từ việc refactor.
+docs: thêm/thay đổi document
+chore: những sửa đổi nhỏ nhặt không liên quan tới code
+style: những thay đổi không làm thay đổi ý nghĩa của code như thay đổi css/ui chẳng hạn.
+perf: code cải tiến về mặt hiệu năng xử lý
+vendor: cập nhật version cho các dependencies, packages.
+==============================================================================================================

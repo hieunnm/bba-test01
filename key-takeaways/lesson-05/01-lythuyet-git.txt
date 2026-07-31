@@ -1,0 +1,17 @@
+Giải thích các câu lệnh: 
+
+git commit --amend -m"<message>"
+
+Công dụng:
+1. Trường hợp đọc commit message mà không biết commit sinh ra mục đích gì, message commit gần nhất bị sai -> dùng lệnh sửa message của commit gần nhất
+2. Thay thế commit cuối cùng bằng 1 commit mới: gộp các thay đổi ở staging vào commit đó. 
+==============================================================================================================
+git restore --staged <file>
+
+Công dụng: 
+bỏ <file> ra khỏi vùng staging area, đưa về lại working directory, nhưng nội dung không thay đổi. Thao tác ngược khi làm của git add <file> 
+
+==============================================================================================================
+git reset HEAD~1
+
+commit cuối bị đưa về vùng working directory. Mất commit ở vùng repository, có thể commit lại sau khi gỡ commit này. 

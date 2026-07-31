@@ -1,0 +1,62 @@
+folder đemo mới được tạo 
+
+a. Tạo 3 file: file1, file2, file3
+- Local: file1, file2, file3
+- Working directory: chưa có thông tin, chưa có khởi tạo repo local
+- Staging area: 
+- Repository: 
+
+b. Chạy lệnh: git init //khởi tạo repo mới local
+- Local: file1, file2, file3
+- Working directory: file1, file2, file3
+- Staging area: 
+- Repository: 
+
+c. Chạy lệnh: git commit -m"init project"
+- Local: file1, file2, file3
+- Working directory: file1, file2, file3
+- Staging area: 
+- Repository: 
+//không có gì để commit vì staging area trống -> chưa có commit nào được tạo
+
+d. Chạy lệnh: git add file1
+- Local: file1, file2, file3
+- Working directory: file2, file3
+- Staging area: file1
+- Repository: 
+//chuyển file 1 qua vùng staging area
+
+e. Chạy lệnh: git commit -m"add file"
+- Local: file1, file2, file3
+- Working directory: file2, file3
+- Staging area: 
+- Repository: file1
+//commit của add file1 
+
+f. Chạy lệnh: git add.
+- Local: file1, file2, file3
+- Working directory: 
+- Staging area: file2, file3
+- Repository: file1
+//add tất cả file vào vùng staging area
+
+g. Chạy lệnh: git restore --staged file2
+- Local: file1, file2, file3
+- Working directory: file2
+- Staging area: file3
+- Repository: file1
+// đưa file2 vùng staging are vừa add về working directory
+
+h. Chạy lệnh: git commit -m"add all files"
+- Local: file1, file2, file3
+- Working directory: file2
+- Staging area: 
+- Repository: file1, file3
+// file3 được commit chuyển sang repsitory
+
+i. Chạy lệnh: git reset HEAD~1
+- Local: file1, file2, file3
+- Working directory: file2, file3
+- Staging area: 
+- Repository: file1
+// file3 được reset chuyển sang working directory. 
