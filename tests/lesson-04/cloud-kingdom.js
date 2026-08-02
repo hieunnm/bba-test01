@@ -1,6 +1,6 @@
 //biến
 let playerName = "Mario";
-let currentLives = "3";
+let currentLives = 3;
 //hằng
 const level1Coins = 25;
 const level2Coins = 30;
