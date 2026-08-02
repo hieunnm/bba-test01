@@ -2,7 +2,7 @@ let powerUp = "mushroom";
 let effect = "";
 
 if (powerUp === 'mushroom') {
-    effect = "Mario becomes supper!";
+    effect = "Mario becomes Super!";
 } else if (powerUp === 'flower') {
     effect = "Mario can shoot fireballs!";
 } else if (powerUp === 'star') {
